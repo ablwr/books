@@ -15,21 +15,23 @@ public class Book {
     private String title;
     private String description;
     private String isbn;
+    private String author;
 
     protected Book() {}
 
-    public Book(long id, String title, String description, String isbn) {
+    public Book(long id, String title, String description, String isbn, String author) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.isbn = isbn;
+        this.author = author;
     }
 
     @Override
     public String toString() {
         return String.format(
-                "Book[id=%d, title='%s', description='%s', isbn='%s']",
-                id, title, description, isbn);
+                "Book[id=%d, title='%s', description='%s', isbn='%s', author='%s']",
+                id, title, description, isbn, author);
     }
 
     // getters and setters
@@ -55,5 +57,13 @@ public class Book {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }

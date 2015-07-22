@@ -11,4 +11,5 @@ public interface BookRepository extends PagingAndSortingRepository<Book, Long> {
 
 	List<Book> findByIsbn(@Param("isbn") String isbn);
   List<Book> findByTitle(@Param("title") String title);
+  List<Book> findByDescription(@Param("description") String description);
 }
